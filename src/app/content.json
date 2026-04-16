@@ -1,0 +1,247 @@
+{
+  "meta": {
+    "documentTitle": "Microsite interactif OpenAI"
+  },
+  "header": {
+    "logoAlt": "OpenAI Logo",
+    "nav": [
+      { "id": "histoire", "label": "Histoire" },
+      { "id": "chronologie", "label": "Chronologie" },
+      { "id": "acteurs", "label": "Acteurs" },
+      { "id": "produits", "label": "Produits" },
+      { "id": "ressources", "label": "Ressources" }
+    ]
+  },
+  "hero": {
+    "title": "L'Odyssée d'OpenAI : de l'AGI pour tous à l'ère GPT",
+    "subtitle": "De sa création en 2015 avec l'ambition de démocratiser l'intelligence artificielle générale, OpenAI a évolué d'un laboratoire de recherche idéaliste à une entreprise phare de l'IA, révolutionnant le monde avec GPT et ChatGPT."
+  },
+  "history": {
+    "sectionTitle": "Histoire",
+    "periods": [
+      {
+        "headingDelay": 0.2,
+        "headingYear": "2015-2019",
+        "headingSubtitle": "Le Laboratoire Idéaliste",
+        "blocks": [
+          {
+            "title": "La Fondation (2015)",
+            "content": "OpenAI est créé en décembre 2015 par Sam Altman, Elon Musk, Ilya Sutskever, Greg Brockman et d'autres visionnaires avec une mission audacieuse : développer une intelligence artificielle générale (AGI) qui bénéficie à toute l'humanité. L'organisation se positionne comme un contrepoids non-profit aux géants technologiques, prônant la transparence et le partage ouvert de la recherche.",
+            "imageSrc": "https://images.unsplash.com/photo-1630673470267-417e4d361129?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHRlY2glMjBzdGFydHVwfGVufDF8fHx8MTc3NjE5NDUzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+            "imageAlt": "Team collaboration",
+            "reverse": false,
+            "delay": 0.3
+          },
+          {
+            "title": "Premières Percées (2018-2019)",
+            "content": "Le laboratoire publie GPT-1 en 2018, démontrant la puissance des transformers pour la génération de texte. En 2019, GPT-2 fait sensation avec ses capacités impressionnantes mais controversées, poussant OpenAI à retarder sa publication complète par crainte d'abus. Cette période marque l'émergence d'une tension entre ouverture et responsabilité.",
+            "imageSrc": "https://images.unsplash.com/photo-1717501219263-9aa2d6a768d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwbmV1cmFsJTIwbmV0d29ya3xlbnwxfHx8fDE3NzYxNzcyMTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+            "imageAlt": "AI neural network",
+            "reverse": true,
+            "delay": 0.4
+          }
+        ]
+      },
+      {
+        "headingDelay": 0.5,
+        "headingYear": "2019-2023",
+        "headingSubtitle": "Le Pivot Stratégique",
+        "blocks": [
+          {
+            "title": "La Transformation Structurelle (2019)",
+            "content": "Face aux coûts astronomiques du développement de l'AGI, OpenAI crée OpenAI LP, une entité à profit plafonné, et noue un partenariat d'un milliard de dollars avec Microsoft. Elon Musk quitte le conseil d'administration, critiquant cette nouvelle direction. Ce pivot marque l'abandon progressif du modèle open source au profit d'une approche commerciale stratégique.",
+            "imageSrc": "https://images.unsplash.com/photo-1573757056004-065ad36e2cf4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB0ZWNobm9sb2d5JTIwaW5ub3ZhdGlvbnxlbnwxfHx8fDE3NzYxOTQ1Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+            "imageAlt": "Technology innovation",
+            "reverse": false,
+            "delay": 0.6
+          },
+          {
+            "title": "L'Ère ChatGPT (2022-2023)",
+            "content": "Le lancement de ChatGPT en novembre 2022 provoque un séisme technologique mondial. L'interface conversationnelle atteint 100 millions d'utilisateurs en deux mois, un record historique. GPT-4 suit en mars 2023, établissant de nouveaux standards de performance. Mais l'ascension fulgurante s'accompagne de tensions internes : en novembre 2023, Sam Altman est brièvement évincé par le conseil d'administration avant d'être réintégré sous la pression des employés et investisseurs, révélant les conflits entre ambitions commerciales et gouvernance éthique.",
+            "imageSrc": "https://images.unsplash.com/flagged/photo-1579274216947-86eaa4b00475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwY2VudGVyJTIwc2VydmVyc3xlbnwxfHx8fDE3NzYwOTU3OTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+            "imageAlt": "Data center",
+            "reverse": true,
+            "delay": 0.7
+          }
+        ]
+      }
+    ]
+  },
+  "timeline": {
+    "sectionTitle": "Chronologie",
+    "sectionSubtitle": "Les moments clés qui ont façonné OpenAI",
+    "events": [
+      {
+        "year": "2015",
+        "title": "I. Naissance d'OpenAI comme laboratoire de recherche à but non lucratif",
+        "description": "Création du laboratoire avec 1 milliard $ de financement initial",
+        "iconKey": "rocket"
+      },
+      {
+        "year": "2018",
+        "title": "GPT-1",
+        "description": "Premier modèle de langage basé sur l'architecture Transformer",
+        "iconKey": "brain"
+      },
+      {
+        "year": "2019",
+        "title": "Départ d'Elon Musk",
+        "description": "Musk quitte le conseil suite au pivot commercial",
+        "iconKey": "userX"
+      },
+      {
+        "year": "2019",
+        "title": "Partenariat Microsoft",
+        "description": "Investissement d'1 milliard $ et création d'OpenAI LP",
+        "iconKey": "sparkles"
+      },
+      {
+        "year": "2021",
+        "title": "DALL-E",
+        "description": "Lancement du générateur d'images par IA",
+        "iconKey": "image"
+      },
+      {
+        "year": "2022",
+        "title": "ChatGPT",
+        "description": "100 millions d'utilisateurs en 2 mois, record mondial",
+        "iconKey": "messageSquare"
+      },
+      {
+        "year": "2022",
+        "title": "Whisper",
+        "description": "Système de reconnaissance vocale open source",
+        "iconKey": "mic"
+      },
+      {
+        "year": "2023",
+        "title": "GPT-4",
+        "description": "Modèle multimodal avec capacités de raisonnement avancées",
+        "iconKey": "brain"
+      },
+      {
+        "year": "2023",
+        "title": "Crise de gouvernance",
+        "description": "Éviction puis réintégration de Sam Altman en 5 jours",
+        "iconKey": "alertTriangle"
+      },
+      {
+        "year": "2024",
+        "title": "Sora",
+        "description": "Générateur de vidéos par IA à partir de texte",
+        "iconKey": "video"
+      }
+    ]
+  },
+  "people": {
+    "sectionTitle": "Acteurs Clés",
+    "sectionSubtitle": "Les visages qui ont façonné l'histoire d'OpenAI",
+    "items": [
+      {
+        "name": "Sam Altman",
+        "role": "CEO",
+        "bio": "Entrepreneur et investisseur, ancien président de Y Combinator. Visionnaire controversé qui a su transformer OpenAI en géant technologique tout en naviguant dans les turbulences de 2023.",
+        "initial": "SA",
+        "imageSrc": "/images/altman.jpg"
+      },
+      {
+        "name": "Ilya Sutskever",
+        "role": "Chief Scientist (jusqu'en 2024)",
+        "bio": "Co-fondateur et sommité en deep learning, ancien étudiant de Geoffrey Hinton. Figure centrale du conflit de gouvernance de 2023, incarnant la tension entre progrès technique et sécurité de l'IA.",
+        "initial": "IS",
+        "imageSrc": "/images/sutskever.jpg"
+      },
+      {
+        "name": "Greg Brockman",
+        "role": "Président & Co-fondateur",
+        "bio": "Ancien CTO de Stripe, architecte technique d'OpenAI. Pilier de stabilité ayant démissionné temporairement en solidarité avec Altman lors de la crise de novembre 2023.",
+        "initial": "GB",
+        "imageSrc": "/images/brockman.jpg"
+      },
+      {
+        "name": "Mira Murati",
+        "role": "CTO",
+        "bio": "Ingénieure visionnaire, ancienne VP chez Tesla et Leap Motion. A supervisé le développement de ChatGPT et DALL-E, devenant brièvement CEO intérimaire durant la crise de 2023.",
+        "initial": "MM",
+        "imageSrc": "/images/murati.jpg"
+      }
+    ]
+  },
+  "products": {
+    "sectionTitle": "Produits Phares",
+    "sectionSubtitle": "Les innovations qui redéfinissent l'intelligence artificielle",
+    "items": [
+      {
+        "name": "GPT-4",
+        "tagline": "Langage & Raisonnement",
+        "description": "Modèle de langage multimodal capable de traiter texte et images. Surpasse 90% des humains aux examens professionnels (barreau, SAT). Établit de nouveaux standards en compréhension contextuelle et génération créative.",
+        "year": "2023",
+        "iconKey": "brain"
+      },
+      {
+        "name": "DALL-E",
+        "tagline": "Génération d'Images",
+        "description": "Créateur d'images à partir de descriptions textuelles. DALL-E 3 intègre une fidélité photographique et une compréhension sémantique avancée, démocratisant la création visuelle professionnelle.",
+        "year": "2021",
+        "iconKey": "image"
+      },
+      {
+        "name": "Whisper",
+        "tagline": "Reconnaissance Vocale",
+        "description": "Système de transcription automatique multilingue open source. Atteint une précision quasi-humaine en reconnaissance vocale, soutenant 99 langues avec robustesse face aux accents et bruits de fond.",
+        "year": "2022",
+        "iconKey": "mic"
+      },
+      {
+        "name": "Sora",
+        "tagline": "Génération de Vidéos",
+        "description": "Générateur de vidéos réalistes jusqu'à 60 secondes à partir de prompts textuels. Simule la physique, les mouvements de caméra et les interactions complexes, ouvrant de nouvelles frontières pour le contenu visuel.",
+        "year": "2024",
+        "iconKey": "video"
+      }
+    ]
+  },
+  "footer": {
+    "sectionTitle": "Ressources & Bibliographie",
+    "sectionSubtitle": "Sources académiques, rapports officiels et articles de référence",
+    "copyright": "© 2026 Microsite éducatif sur l'histoire d'OpenAI. Projet à but informatif non affilié à OpenAI.",
+    "resources": [
+      {
+        "title": "OpenAI Charter",
+        "author": "OpenAI",
+        "type": "Document officiel",
+        "url": "#"
+      },
+      {
+        "title": "GPT-4 Technical Report",
+        "author": "OpenAI Research Team",
+        "type": "Publication académique",
+        "url": "#"
+      },
+      {
+        "title": "The Inside Story of ChatGPT's Astonishing Potential",
+        "author": "Steven Levy, Wired",
+        "type": "Article de presse",
+        "url": "#"
+      },
+      {
+        "title": "What Really Went Down at OpenAI",
+        "author": "Will Knight, MIT Technology Review",
+        "type": "Article de presse",
+        "url": "#"
+      },
+      {
+        "title": "Attention Is All You Need",
+        "author": "Vaswani et al.",
+        "type": "Publication académique",
+        "url": "#"
+      },
+      {
+        "title": "OpenAI's Misalignment and Microsoft's Gain",
+        "author": "Casey Newton, Platformer",
+        "type": "Article de presse",
+        "url": "#"
+      }
+    ]
+  }
+}
