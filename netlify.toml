@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA : toutes les routes servent index.html (évite 404 / page blanche au refresh)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
