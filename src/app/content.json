@@ -279,6 +279,64 @@
         "initial": "MM",
         "imageSrc": "/images/murati.jpg"
       }
+    ],
+    "actorGroups": [
+      {
+        "title": "1. Les Fondateurs (Le noyau historique)",
+        "summary": "OpenAI naît fin 2015 de la convergence entre entrepreneuriat, fintech, recherche académique et vision technologique.",
+        "points": [
+          "Sam Altman : stratégie, commercialisation et vision produit.",
+          "Greg Brockman : scaling technique et passerelle science-produit.",
+          "Ilya Sutskever : deep learning et sécurité de l'IA.",
+          "Elon Musk : cofondateur initial, retrait du board en 2018.",
+          "Autres cofondateurs : Zaremba, Schulman, Karpathy, Blackwell, Cheung, Vagata, Kingma."
+        ]
+      },
+      {
+        "title": "2. Les Dirigeants Opérationnels (L'exécution stratégique)",
+        "summary": "Ils pilotent l'expansion commerciale et la diffusion grand public des produits.",
+        "points": [
+          "Sam Altman (CEO) : levées de fonds et partenariats majeurs.",
+          "Greg Brockman (Président) : exécution organisationnelle et technologique.",
+          "Mira Murati (CTO) : leadership produit, intérim lors de la crise de novembre 2023.",
+          "Ilya Sutskever (Chief Scientist) : arbitrages recherche et sécurité."
+        ]
+      },
+      {
+        "title": "3. Les Chercheurs et Architectes Scientifiques",
+        "summary": "Le coeur scientifique qui porte les avancées fondamentales (GPT, alignement, RLHF).",
+        "points": [
+          "Ilya Sutskever : leadership en apprentissage profond.",
+          "John Schulman : rôle clé dans l'alignement et RLHF (InstructGPT).",
+          "Wojciech Zaremba et Andrej Karpathy : noyau scientifique historique."
+        ]
+      },
+      {
+        "title": "4. Le Board et la Gouvernance",
+        "summary": "Le board de la structure non-profit contrôle l'entité capped-profit pour préserver la mission d'intérêt général.",
+        "points": [
+          "Membres clés : Bret Taylor, Larry Summers, Adam D'Angelo.",
+          "Membres indépendants : Sue Desmond-Hellmann, Zico Kolter, Paul M. Nakasone, Adebayo Ogunlesi, Nicole Seligman.",
+          "Spécificité : les directeurs indépendants ne détiennent pas d'equity."
+        ]
+      },
+      {
+        "title": "5. Microsoft (Partenaire stratégique décisif)",
+        "summary": "Microsoft agit comme investisseur, infrastructure cloud et canal de distribution.",
+        "points": [
+          "Investisseur depuis 2019.",
+          "Azure fournit la puissance de calcul des workloads OpenAI.",
+          "Intégration dans Copilot, GitHub et Bing."
+        ]
+      },
+      {
+        "title": "6. Investisseurs et Soutiens financiers",
+        "summary": "Des acteurs de soutien qui financent la croissance de la structure capped-profit.",
+        "points": [
+          "Investisseurs historiques : Reid Hoffman (et sa fondation), Khosla Ventures.",
+          "Principe structurant : retours financiers plafonnés pour maintenir la primauté de la mission."
+        ]
+      }
     ]
   },
   "products": {

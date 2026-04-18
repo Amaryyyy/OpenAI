@@ -7,7 +7,9 @@ import { inViewOptions, springPop } from '../scrollMotion';
 import SectionHeading from './SectionHeading';
 
 interface Person { name: string; role: string; bio: string; initial: string; imageSrc?: string; }
+interface ActorGroup { title: string; summary: string; points: string[]; }
 const people: Person[] = content.people.items;
+const actorGroups: ActorGroup[] = content.people.actorGroups ?? [];
 
 const INITIALS_COLORS = [
   'from-[#2a5f5f]/90 to-[#1a3a3a]/95',
@@ -216,6 +218,37 @@ export default function People() {
           {String(people.length).padStart(2, '0')}
         </p>
       </div>
+
+      {actorGroups.length > 0 && (
+        <div className={`relative ${pageGutter} mt-8 md:mt-10`}>
+          <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+            {actorGroups.map((group, idx) => (
+              <motion.article
+                key={group.title}
+                initial={{ opacity: 0, y: 20, filter: 'blur(4px)' }}
+                whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                viewport={inViewOptions}
+                transition={springPop(0.08 + idx * 0.04)}
+                className={`${glassPanel} rounded-2xl p-4 md:p-5`}
+              >
+                <h3 className="text-sm font-black uppercase tracking-[0.06em] text-black/75 md:text-[0.95rem]">
+                  {group.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed tracking-tight text-black/60">
+                  {group.summary}
+                </p>
+                <ul className="mt-3 space-y-1.5">
+                  {group.points.map((point, pointIdx) => (
+                    <li key={pointIdx} className="text-[0.82rem] leading-relaxed tracking-tight text-black/58">
+                      • {point}
+                    </li>
+                  ))}
+                </ul>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   );
 }
