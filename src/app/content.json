@@ -413,40 +413,184 @@
     "copyright": "© 2026 Microsite éducatif sur l'histoire d'OpenAI. Projet à but informatif non affilié à OpenAI.",
     "resources": [
       {
-        "title": "OpenAI Charter",
+        "title": "[1] Tech giants join forces to form OpenAI (2015)",
+        "author": "BBC News",
+        "type": "Revue professionnelle",
+        "url": "https://www.bbc.com/news/technology-35082344"
+      },
+      {
+        "title": "[2] Elon Musk and OpenAI tensions (2023)",
+        "author": "Business Insider",
+        "type": "Revue professionnelle",
+        "url": "https://www.businessinsider.com/elon-musk-insulted-openai-intern-given-trophy-2018-exit-tesla-2023-4"
+      },
+      {
+        "title": "[3] Elon Musk is leaving the board of OpenAI (2018)",
+        "author": "CNBC",
+        "type": "Revue professionnelle",
+        "url": "https://www.cnbc.com/2018/02/21/elon-musk-is-leaving-the-board-of-openai.html"
+      },
+      {
+        "title": "[4] ChatGPT users statistics",
+        "author": "Exploding Topics",
+        "type": "Site internet",
+        "url": "https://explodingtopics.com/blog/chatgpt-users"
+      },
+      {
+        "title": "[5] History of GPT (2023)",
+        "author": "GeeksforGeeks",
+        "type": "Site internet",
+        "url": "https://www.geeksforgeeks.org/artificial-intelligence/the-history-of-gpt/"
+      },
+      {
+        "title": "[6] Empire of AI: Dreams and Nightmares in Sam Altman's OpenAI (2025)",
+        "author": "Hao, K.",
+        "type": "Article scientifique",
+        "url": "https://www.penguinrandomhouse.com/books/730980/empire-of-ai-by-karen-hao/"
+      },
+      {
+        "title": "[7] L'histoire de ChatGPT : de GPT-3 à aujourd'hui",
+        "author": "Le Big Data",
+        "type": "Site internet",
+        "url": "https://www.lebigdata.fr/lhistoire-de-chatgpt-de-gpt-3-a-aujourdhui"
+      },
+      {
+        "title": "[8] OpenAI partnership announcement (2019)",
+        "author": "Microsoft",
+        "type": "Site internet",
+        "url": "https://news.microsoft.com/source/2019/07/22/openai-forms-exclusive-computing-partnership-with-microsoft-to-build-new-azure-ai-supercomputing-technologies/"
+      },
+      {
+        "title": "[9] The messy reality behind OpenAI (2020)",
+        "author": "MIT Technology Review",
+        "type": "Revue professionnelle",
+        "url": "https://www.technologyreview.com/2020/02/17/844721/ai-openai-moonshot-elon-musk-sam-altman-greg-brockman-messy-secretive-reality/"
+      },
+      {
+        "title": "[10] Lakyara publication (2025)",
+        "author": "NRI",
+        "type": "Article scientifique",
+        "url": "https://www.nri.com/en/knowledge/publication/lakyara_202509/files/vol404.pdf"
+      },
+      {
+        "title": "[11] Introducing OpenAI (2015)",
         "author": "OpenAI",
-        "type": "Document officiel",
-        "url": "#"
+        "type": "Site internet",
+        "url": "https://openai.com/index/introducing-openai/"
       },
       {
-        "title": "GPT-4 Technical Report",
-        "author": "OpenAI Research Team",
-        "type": "Publication académique",
-        "url": "#"
+        "title": "[12] OpenAI Gym Beta (2016)",
+        "author": "OpenAI",
+        "type": "Site internet",
+        "url": "https://openai.com/index/openai-gym-beta/"
       },
       {
-        "title": "The Inside Story of ChatGPT's Astonishing Potential",
-        "author": "Steven Levy, Wired",
-        "type": "Article de presse",
-        "url": "#"
+        "title": "[13] Universe (2016)",
+        "author": "OpenAI",
+        "type": "Site internet",
+        "url": "https://openai.com/index/universe/"
       },
       {
-        "title": "What Really Went Down at OpenAI",
-        "author": "Will Knight, MIT Technology Review",
-        "type": "Article de presse",
-        "url": "#"
+        "title": "[14] The truth Elon Musk left out (2019)",
+        "author": "OpenAI",
+        "type": "Site internet",
+        "url": "https://openai.com/index/the-truth-elon-left-out/"
       },
       {
-        "title": "Attention Is All You Need",
-        "author": "Vaswani et al.",
-        "type": "Publication académique",
-        "url": "#"
+        "title": "[15] GPT-2: 6-month follow-up (2019)",
+        "author": "OpenAI",
+        "type": "Site internet",
+        "url": "https://openai.com/index/gpt-2-6-month-follow-up/"
       },
       {
-        "title": "OpenAI's Misalignment and Microsoft's Gain",
-        "author": "Casey Newton, Platformer",
-        "type": "Article de presse",
-        "url": "#"
+        "title": "[16] DALL·E 3 is now available in ChatGPT Plus and Enterprise",
+        "author": "OpenAI",
+        "type": "Site internet",
+        "url": "https://openai.com/index/dall-e-3-is-now-available-in-chatgpt-plus-and-enterprise/"
+      },
+      {
+        "title": "[17] Sora is here",
+        "author": "OpenAI",
+        "type": "Site internet",
+        "url": "https://openai.com/index/sora-is-here/"
+      },
+      {
+        "title": "[18] Whisper",
+        "author": "OpenAI",
+        "type": "Site internet",
+        "url": "https://openai.com/fr-FR/index/whisper/"
+      },
+      {
+        "title": "[19] Restructuring OpenAI",
+        "author": "OpenAI Files",
+        "type": "Site internet",
+        "url": "https://www.openaifiles.org/restructuring"
+      },
+      {
+        "title": "[30] À propos : mission, organisation et évolution",
+        "author": "OpenAI",
+        "type": "Site internet",
+        "url": "https://openai.com/fr-FR/about/"
+      },
+      {
+        "title": "[20] OpenAI and Microsoft partnership (2019)",
+        "author": "PR Newswire",
+        "type": "Site internet",
+        "url": "https://www.prnewswire.com/news-releases/openai-forme-un-partenariat-exclusif-avec-microsoft-pour-developper-les-nouvelles-technologies-de-calcul-intensif-azure-ai-892454378.html"
+      },
+      {
+        "title": "[21] D'OpenAI à Kyutai : une question de gouvernance",
+        "author": "Qant (Kessel Media)",
+        "type": "Site internet",
+        "url": "https://qant.kessel.media/posts/pst_47194eb5dd254efabc10358c2840347b/dopenai-a-kyutai-une-question-de-gouvernance"
+      },
+      {
+        "title": "[22] NYT vs OpenAI copyright case (2025)",
+        "author": "Reuters",
+        "type": "Revue professionnelle",
+        "url": "https://www.reuters.com/legal/litigation/judge-explains-order-new-york-times-openai-copyright-case-2025-04-04/"
+      },
+      {
+        "title": "[23] OpenAI wins $200 million US defense contract (2025)",
+        "author": "Reuters",
+        "type": "Revue professionnelle",
+        "url": "https://www.reuters.com/world/us/openai-wins-200-million-us-defense-contract-2025-06-16/"
+      },
+      {
+        "title": "[24] Stargate UAE AI datacenter begin operation 2026 (2025)",
+        "author": "Reuters",
+        "type": "Revue professionnelle",
+        "url": "https://www.reuters.com/business/media-telecom/stargate-uae-ai-datacenter-begin-operation-2026-2025-05-22/"
+      },
+      {
+        "title": "[25] European sovereignty in AI (2024)",
+        "author": "Sciences Po",
+        "type": "Article scientifique",
+        "url": "https://www.sciencespo.fr/public/chaire-numerique/2024/11/08/research-paper-european-sovereignty-in-artificial-intelligence-a-competence-based-perspective-by-ludovic-dibiaggio-lionel-nesta-and-simone-vannuccini/"
+      },
+      {
+        "title": "[26] OpenAI shifts to capped-profit model (2019)",
+        "author": "TechCrunch",
+        "type": "Revue professionnelle",
+        "url": "https://techcrunch.com/2019/03/11/openai-shifts-from-nonprofit-to-capped-profit-to-attract-capital/"
+      },
+      {
+        "title": "[27] Microsoft invests billions more dollars in OpenAI (2023)",
+        "author": "TechCrunch",
+        "type": "Revue professionnelle",
+        "url": "https://techcrunch.com/2023/01/23/microsoft-invests-billions-more-dollars-in-openai-extends-partnership/"
+      },
+      {
+        "title": "[28] Sam Altman May Control Our Future—Can He Be Trusted?",
+        "author": "The New Yorker",
+        "type": "Revue professionnelle",
+        "url": "https://www.newyorker.com/magazine/2024/03/18/sam-altman-may-control-our-future-can-he-be-trusted"
+      },
+      {
+        "title": "[29] OpenAI opens GPT-3 for everyone",
+        "author": "Towards Data Science",
+        "type": "Revue professionnelle",
+        "url": "https://towardsdatascience.com/openai-opens-gpt-3-for-everyone-fb7fed309f6/"
       }
     ]
   }

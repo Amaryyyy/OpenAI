@@ -35,7 +35,7 @@ const HistoryBlock = ({
 
       {/* ── Image ── */}
       <div className="relative w-full shrink-0 md:w-[52%]">
-        <div className="relative aspect-[4/3] w-full overflow-hidden md:aspect-auto md:h-full md:min-h-[18rem] md:max-h-[26rem]">
+        <div className="relative aspect-[4/3] w-full overflow-hidden md:aspect-auto md:h-[22rem] lg:h-[24rem]">
           <motion.div
             initial={{ scale: 1.04 }}
             whileInView={{ scale: 1 }}
@@ -46,11 +46,7 @@ const HistoryBlock = ({
             <ImageWithFallback
               src={imageSrc}
               alt={imageAlt}
-              className={`h-full w-full object-cover grayscale transition-all duration-700 hover:grayscale-0 ${
-                imageSrc.includes('/images/image2') || imageSrc.includes('/images/image3')
-                  ? 'scale-125'
-                  : ''
-              }`}
+              className="h-full w-full object-cover object-center grayscale transition-all duration-700 hover:grayscale-0"
             />
           </motion.div>
 
