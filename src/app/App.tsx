@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import History from './components/History';
+import Summary from './components/Summary';
 import Timeline from './components/Timeline';
 import People from './components/People';
 import Products from './components/Products';
@@ -22,6 +23,7 @@ export default function App() {
         <main className="w-full overflow-x-hidden">
           <Hero />
           <History />
+          <Summary />
           <Timeline />
           <People />
           <Products />

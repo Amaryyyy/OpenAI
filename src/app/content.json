@@ -6,6 +6,7 @@
     "logoAlt": "OpenAI Logo",
     "nav": [
       { "id": "histoire", "label": "Histoire" },
+      { "id": "presentation-synthetique", "label": "Présentation synthétique" },
       { "id": "chronologie", "label": "Chronologie" },
       { "id": "acteurs", "label": "Acteurs" },
       { "id": "produits", "label": "Produits" },
@@ -65,6 +66,30 @@
           }
         ]
       }
+    ]
+  },
+  "summary": {
+    "sectionTitle": "Présentation synthétique",
+    "sectionSubtitle": "Un aperçu rapide de la trajectoire d'OpenAI entre vision initiale, pivot industriel et impact global.",
+    "highlights": [
+      {
+        "title": "Mission d'origine",
+        "description": "OpenAI naît en 2015 avec une ambition forte : développer une AGI au bénéfice du plus grand nombre, dans un esprit de recherche ouverte et responsable."
+      },
+      {
+        "title": "Virage stratégique",
+        "description": "Dès 2019, la montée des coûts pousse l'organisation vers un modèle hybride avec OpenAI LP et un partenariat majeur avec Microsoft."
+      },
+      {
+        "title": "Effet de bascule",
+        "description": "ChatGPT et GPT-4 transforment OpenAI en acteur central de l'IA mondiale, tout en exposant des tensions de gouvernance et d'éthique."
+      }
+    ],
+    "keyFigures": [
+      "2015 : création d'OpenAI comme laboratoire à but non lucratif.",
+      "2019 : 1 milliard $ investis par Microsoft et création d'OpenAI LP.",
+      "2022 : ChatGPT atteint 100 millions d'utilisateurs en 2 mois.",
+      "2023 : crise de gouvernance autour de Sam Altman, puis réintégration rapide."
     ]
   },
   "timeline": {
