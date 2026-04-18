@@ -70,25 +70,18 @@
   "summary": {
     "sectionTitle": "Présentation synthétique",
     "sectionSubtitle": "Un aperçu rapide de la trajectoire d'OpenAI entre vision initiale, pivot industriel et impact global.",
-    "problemStatement": "De la recherche idéaliste à la puissance systémique : comment OpenAI a-t-elle reconfiguré son modèle pour devenir l'infrastructure critique de l'économie numérique mondiale ?",
     "highlights": [
       {
         "title": "Mission d'origine",
         "description": "OpenAI naît en 2015 avec une ambition forte : développer une AGI au bénéfice du plus grand nombre, dans un esprit de recherche ouverte et responsable."
-        ,"imageSrc": "https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhaSUyMHJlc2VhcmNoJTIwbGFib3JhdG9yeSUyMHRlYW18ZW58MXx8fHwxNzc2MTk0NTM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-        "imageAlt": "Laboratoire de recherche sur l'intelligence artificielle"
       },
       {
         "title": "Virage stratégique",
         "description": "Dès 2019, la montée des coûts pousse l'organisation vers un modèle hybride avec OpenAI LP et un partenariat majeur avec Microsoft."
-        ,"imageSrc": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3JlJTIwc2VydmVycyUyMGRhdGElMjBjZW50ZXJ8ZW58MXx8fHwxNzc2MTk0NTM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-        "imageAlt": "Infrastructure de datacenter et montée en puissance industrielle"
       },
       {
         "title": "Effet de bascule",
         "description": "ChatGPT et GPT-4 transforment OpenAI en acteur central de l'IA mondiale, tout en exposant des tensions de gouvernance et d'éthique."
-        ,"imageSrc": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhaSUyMGRhdGEyJTIwaW5mcmFzdHJ1Y3R1cmV8ZW58MXx8fHwxNzc2MTk0NTM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-        "imageAlt": "Infrastructure critique et transformation de l'IA en système global"
       }
     ],
     "keyFigures": [
