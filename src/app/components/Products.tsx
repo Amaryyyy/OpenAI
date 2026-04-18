@@ -12,9 +12,9 @@ const PRODUCT_LOGOS: Record<string, string> = {
   image: '/images/dalle.png',
   mic:   '/images/whisper.png',
   video: '/images/sora.png',
-  codex: '/images/codex.png',
-  prism: '/images/prism.png',
-  atlas: '/images/atlas.png',
+  codex: '/images/codex.jpg',
+  prism: '/images/prism.jpg',
+  atlas: '/images/atlas.jpg',
 };
 
 const BW_LOGO_KEYS = new Set(['image', 'atlas']);
