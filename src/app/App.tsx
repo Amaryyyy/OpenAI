@@ -22,8 +22,8 @@ export default function App() {
         <Header />
         <main className="w-full overflow-x-hidden">
           <Hero />
-          <History />
           <Summary />
+          <History />
           <Timeline />
           <People />
           <Products />
