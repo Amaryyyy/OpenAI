@@ -229,7 +229,7 @@ export default function People() {
                 whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                 viewport={inViewOptions}
                 transition={springPop(0.08 + idx * 0.04)}
-                className="rounded-2xl border border-white/[0.14] bg-white/[0.08] p-4 shadow-[0_14px_40px_rgba(4,8,15,0.35),inset_0_1px_0_rgba(255,255,255,0.1)] backdrop-blur-xl md:p-5"
+                className="rounded-2xl border border-[#6f8fba]/35 bg-[linear-gradient(140deg,rgba(53,74,114,0.96)_0%,rgba(42,95,95,0.9)_58%,rgba(27,42,66,0.95)_100%)] p-4 shadow-[0_10px_30px_rgba(8,18,34,0.35),inset_0_1px_0_rgba(255,255,255,0.12)] md:p-5"
               >
                 <h3 className="text-sm font-black uppercase tracking-[0.06em] text-white/95 md:text-[0.95rem]">
                   {group.title}
