@@ -18,7 +18,8 @@
     "subtitle": "De sa création en 2015 avec l'ambition de démocratiser l'intelligence artificielle générale, OpenAI a évolué d'un laboratoire de recherche idéaliste à une entreprise phare de l'IA, révolutionnant le monde avec GPT et ChatGPT."
   },
   "history": {
-    "sectionTitle": "Synthèse : La trajectoire d'OpenAI (2015-2026)",
+    "sectionTitle": "La trajectoire d'OpenAI (2015-2026)",
+    "sectionSubtitle": "De la recherche idéaliste à la puissance systémique : comment OpenAI a-t-elle reconfiguré son modèle pour devenir l'infrastructure critique de l'économie numérique mondiale ?",
     "periods": [
       {
         "headingDelay": 0.2,
@@ -28,8 +29,8 @@
           {
             "title": "I. L'Utopie du laboratoire de recherche ouvert (2015-2019)",
             "content": "À sa naissance, OpenAI se positionne comme un contre-modèle aux géants de la technologie (Big Tech). Portée par une mission de \"bien commun\", l'organisation adopte une structure non lucrative pour garantir que l'Intelligence Artificielle Générale (AGI) profite à l'humanité. Durant cette période, la stratégie est celle de la légitimation scientifique : OpenAI publie ses recherches en accès libre et lance des outils comme OpenAI Gym pour standardiser le domaine. Cependant, cette phase se heurte rapidement à une réalité matérielle : la \"course à la puissance\" (dimension Machine) exige des ressources financières et des capacités de calcul que la seule philanthropie ne peut plus soutenir.",
-            "imageSrc": "https://images.unsplash.com/photo-1630673470267-417e4d361129?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHRlY2glMjBzdGFydHVwfGVufDF8fHx8MTc3NjE5NDUzNnww&ixlib=rb-4.1.0&q=80&w=1080",
-            "imageAlt": "Team collaboration",
+            "imageSrc": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            "imageAlt": "Chercheurs en laboratoire travaillant sur des modèles d'IA",
             "reverse": false,
             "delay": 0.3
           }
@@ -43,9 +44,9 @@
           {
             "title": "II. Le pivot industriel et le succès de l'interface au grand public (2019-2023)",
             "content": "L'année 2019 marque une rupture stratégique avec la création d'une structure à but lucratif plafonné (capped-profit) et le partenariat historique avec Microsoft. C'est l'ère de l'industrialisation. OpenAI ne se contente plus de chercher ; elle déploie des modèles fondationnels (GPT-3) via des API, transformant l'IA en une ressource exploitable par les entreprises. Ce pivot culmine avec le lancement de ChatGPT en novembre 2022, qui fait entrer l'IA dans le quotidien de millions d'utilisateurs en seulement cinq jours. L'innovation méthodologique du RLHF (apprentissage par feedback humain) permet alors de transformer une science des données brute en un produit de consommation universel, imposant OpenAI comme l'acteur dominant du marché.",
-            "imageSrc": "https://images.unsplash.com/photo-1573757056004-065ad36e2cf4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB0ZWNobm9sb2d5JTIwaW5ub3ZhdGlvbnxlbnwxfHx8fDE3NzYxOTQ1Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-            "imageAlt": "Technology innovation",
-            "reverse": false,
+            "imageSrc": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            "imageAlt": "Rangées de serveurs illustrant l'industrialisation de l'IA",
+            "reverse": true,
             "delay": 0.6
           }
         ]
@@ -58,9 +59,9 @@
           {
             "title": "III. Vers l'infrastructure critique, la souveraineté et les tensions (2023-2026)",
             "content": "Depuis 2023, OpenAI a changé de nature pour devenir une infrastructure critique. Sa croissance ne repose plus uniquement sur le logiciel, mais sur une maîtrise physique du numérique. Avec le projet Stargate, l'investissement se compte en centaines de milliards de dollars pour bâtir des méga-datacenters, impliquant des alliances géopolitiques avec des fonds souverains et des concurrents comme Amazon. Cette puissance nouvelle révèle toutefois des tensions structurelles : les crises de gouvernance (notamment en novembre 2023) illustrent le conflit permanent entre la mission initiale de sûreté et les impératifs d'une hyper-croissance industrielle. OpenAI incarne désormais ce point de convergence où la recherche scientifique, les intérêts étatiques et les logiques de marché fusionnent pour structurer l'avenir numérique mondial.",
-            "imageSrc": "https://images.unsplash.com/flagged/photo-1579274216947-86eaa4b00475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwY2VudGVyJTIwc2VydmVyc3xlbnwxfHx8fDE3NzYwOTU3OTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-            "imageAlt": "Data center",
-            "reverse": true,
+            "imageSrc": "https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            "imageAlt": "Infrastructure numerique critique et reseaux mondiaux",
+            "reverse": false,
             "delay": 0.9
           }
         ]
