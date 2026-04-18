@@ -23,7 +23,15 @@ const HistoryBlock = ({
   reverse?: boolean;
   delay?: number;
   index?: number;
-}) => (
+}) => {
+  const imagePositionClass =
+    imageSrc.includes('/images/image2')
+      ? 'object-[66%_center]'
+      : imageSrc.includes('/images/image3')
+        ? 'object-[36%_center]'
+        : 'object-center';
+
+  return (
   <motion.article
     initial={{ opacity: 0, y: 44, filter: 'blur(8px)' }}
     whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
@@ -34,8 +42,8 @@ const HistoryBlock = ({
     <div className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
 
       {/* ── Image ── */}
-      <div className="relative w-full shrink-0 md:w-[52%]">
-        <div className="relative aspect-[4/3] w-full overflow-hidden md:aspect-auto md:h-[22rem] lg:h-[24rem]">
+      <div className="relative w-full shrink-0 md:flex md:w-[52%] md:items-stretch">
+        <div className="relative aspect-[4/3] w-full overflow-hidden md:aspect-auto md:h-full md:min-h-full">
           <motion.div
             initial={{ scale: 1.04 }}
             whileInView={{ scale: 1 }}
@@ -46,7 +54,7 @@ const HistoryBlock = ({
             <ImageWithFallback
               src={imageSrc}
               alt={imageAlt}
-              className="h-full w-full object-cover object-center grayscale transition-all duration-700 hover:grayscale-0"
+              className={`h-full w-full object-cover ${imagePositionClass} grayscale transition-all duration-700 hover:grayscale-0`}
             />
           </motion.div>
 
@@ -74,7 +82,8 @@ const HistoryBlock = ({
       </motion.div>
     </div>
   </motion.article>
-);
+  );
+};
 
 /* ── Séparateur de période ── */
 const PeriodLabel = ({
