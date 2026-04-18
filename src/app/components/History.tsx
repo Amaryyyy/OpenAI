@@ -68,7 +68,7 @@ const HistoryBlock = ({
         <h3 className="mb-4 text-2xl font-bold leading-snug tracking-tight md:text-[1.65rem]">
           {title}
         </h3>
-        <p className="whitespace-pre-line text-base leading-relaxed tracking-tight text-black/60 md:text-[1.0625rem]">
+        <p className="text-base leading-relaxed tracking-tight text-black/60 md:text-[1.0625rem]">
           {content}
         </p>
       </motion.div>
@@ -102,7 +102,7 @@ const PeriodLabel = ({
 
 /* ── Section principale ── */
 export default function History() {
-  const { sectionTitle, sectionSubtitle, periods } = content.history;
+  const { sectionTitle, periods } = content.history;
 
   /* index global pour numéroter les blocs à la suite */
   let blockCounter = 0;
@@ -114,7 +114,7 @@ export default function History() {
 
       {/* ── Titre ── */}
       <header className={`relative w-full border-b border-black/[0.06] ${pageGutter} pb-12 pt-14 md:pb-16 md:pt-20`}>
-        <SectionHeading title={sectionTitle} subtitle={sectionSubtitle} />
+        <SectionHeading title={sectionTitle} />
       </header>
 
       {/* ── Périodes ── */}

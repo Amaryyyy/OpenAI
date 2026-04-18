@@ -5,8 +5,8 @@
   "header": {
     "logoAlt": "OpenAI Logo",
     "nav": [
-      { "id": "presentation-synthetique", "label": "Présentation synthétique" },
       { "id": "histoire", "label": "Histoire" },
+      { "id": "presentation-synthetique", "label": "Présentation synthétique" },
       { "id": "chronologie", "label": "Chronologie" },
       { "id": "acteurs", "label": "Acteurs" },
       { "id": "produits", "label": "Produits" },
@@ -18,50 +18,51 @@
     "subtitle": "De sa création en 2015 avec l'ambition de démocratiser l'intelligence artificielle générale, OpenAI a évolué d'un laboratoire de recherche idéaliste à une entreprise phare de l'IA, révolutionnant le monde avec GPT et ChatGPT."
   },
   "history": {
-    "sectionTitle": "Synthèse : La trajectoire d'OpenAI (2015-2026)",
+    "sectionTitle": "Histoire",
     "periods": [
       {
         "headingDelay": 0.2,
         "headingYear": "2015-2019",
-        "headingSubtitle": "L'Utopie du laboratoire de recherche ouvert",
+        "headingSubtitle": "Le Laboratoire Idéaliste",
         "blocks": [
           {
-            "title": "I. L'Utopie du laboratoire de recherche ouvert (2015-2019)",
-            "content": "À sa naissance, OpenAI se positionne comme un contre-modèle aux géants de la technologie (Big Tech). Portée par une mission de \"bien commun\", l'organisation adopte une structure non lucrative pour garantir que l'Intelligence Artificielle Générale (AGI) profite à l'humanité. Durant cette période, la stratégie est celle de la légitimation scientifique : OpenAI publie ses recherches en accès libre et lance des outils comme OpenAI Gym pour standardiser le domaine. Cependant, cette phase se heurte rapidement à une réalité matérielle : la \"course à la puissance\" (dimension Machine) exige des ressources financières et des capacités de calcul que la seule philanthropie ne peut plus soutenir.",
+            "title": "La Fondation (2015)",
+            "content": "OpenAI est créé en décembre 2015 par Sam Altman, Elon Musk, Ilya Sutskever, Greg Brockman et d'autres visionnaires avec une mission audacieuse : développer une intelligence artificielle générale (AGI) qui bénéficie à toute l'humanité. L'organisation se positionne comme un contrepoids non-profit aux géants technologiques, prônant la transparence et le partage ouvert de la recherche.",
             "imageSrc": "https://images.unsplash.com/photo-1630673470267-417e4d361129?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHRlY2glMjBzdGFydHVwfGVufDF8fHx8MTc3NjE5NDUzNnww&ixlib=rb-4.1.0&q=80&w=1080",
             "imageAlt": "Team collaboration",
             "reverse": false,
             "delay": 0.3
+          },
+          {
+            "title": "Premières Percées (2018-2019)",
+            "content": "Le laboratoire publie GPT-1 en 2018, démontrant la puissance des transformers pour la génération de texte. En 2019, GPT-2 fait sensation avec ses capacités impressionnantes mais controversées, poussant OpenAI à retarder sa publication complète par crainte d'abus. Cette période marque l'émergence d'une tension entre ouverture et responsabilité.",
+            "imageSrc": "https://images.unsplash.com/photo-1717501219263-9aa2d6a768d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwbmV1cmFsJTIwbmV0d29ya3xlbnwxfHx8fDE3NzYxNzcyMTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+            "imageAlt": "AI neural network",
+            "reverse": true,
+            "delay": 0.4
           }
         ]
       },
       {
         "headingDelay": 0.5,
         "headingYear": "2019-2023",
-        "headingSubtitle": "Le pivot industriel et le succès de l'interface au grand public",
+        "headingSubtitle": "Le Pivot Stratégique",
         "blocks": [
           {
-            "title": "II. Le pivot industriel et le succès de l'interface au grand public (2019-2023)",
-            "content": "L'année 2019 marque une rupture stratégique avec la création d'une structure à but lucratif plafonné (capped-profit) et le partenariat historique avec Microsoft. C'est l'ère de l'industrialisation. OpenAI ne se contente plus de chercher ; elle déploie des modèles fondationnels (GPT-3) via des API, transformant l'IA en une ressource exploitable par les entreprises. Ce pivot culmine avec le lancement de ChatGPT en novembre 2022, qui fait entrer l'IA dans le quotidien de millions d'utilisateurs en seulement cinq jours. L'innovation méthodologique du RLHF (apprentissage par feedback humain) permet alors de transformer une science des données brute en un produit de consommation universel, imposant OpenAI comme l'acteur dominant du marché.",
+            "title": "La Transformation Structurelle (2019)",
+            "content": "Face aux coûts astronomiques du développement de l'AGI, OpenAI crée OpenAI LP, une entité à profit plafonné, et noue un partenariat d'un milliard de dollars avec Microsoft. Elon Musk quitte le conseil d'administration, critiquant cette nouvelle direction. Ce pivot marque l'abandon progressif du modèle open source au profit d'une approche commerciale stratégique.",
             "imageSrc": "https://images.unsplash.com/photo-1573757056004-065ad36e2cf4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB0ZWNobm9sb2d5JTIwaW5ub3ZhdGlvbnxlbnwxfHx8fDE3NzYxOTQ1Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
             "imageAlt": "Technology innovation",
             "reverse": false,
             "delay": 0.6
-          }
-        ]
-      },
-      {
-        "headingDelay": 0.8,
-        "headingYear": "2023-2026",
-        "headingSubtitle": "Vers l'infrastructure critique, la souveraineté et les tensions",
-        "blocks": [
+          },
           {
-            "title": "III. Vers l'infrastructure critique, la souveraineté et les tensions (2023-2026)",
-            "content": "Depuis 2023, OpenAI a changé de nature pour devenir une infrastructure critique. Sa croissance ne repose plus uniquement sur le logiciel, mais sur une maîtrise physique du numérique. Avec le projet Stargate, l'investissement se compte en centaines de milliards de dollars pour bâtir des méga-datacenters, impliquant des alliances géopolitiques avec des fonds souverains et des concurrents comme Amazon. Cette puissance nouvelle révèle toutefois des tensions structurelles : les crises de gouvernance (notamment en novembre 2023) illustrent le conflit permanent entre la mission initiale de sûreté et les impératifs d'une hyper-croissance industrielle. OpenAI incarne désormais ce point de convergence où la recherche scientifique, les intérêts étatiques et les logiques de marché fusionnent pour structurer l'avenir numérique mondial.",
+            "title": "L'Ère ChatGPT (2022-2023)",
+            "content": "Le lancement de ChatGPT en novembre 2022 provoque un séisme technologique mondial. L'interface conversationnelle atteint 100 millions d'utilisateurs en deux mois, un record historique. GPT-4 suit en mars 2023, établissant de nouveaux standards de performance. Mais l'ascension fulgurante s'accompagne de tensions internes : en novembre 2023, Sam Altman est brièvement évincé par le conseil d'administration avant d'être réintégré sous la pression des employés et investisseurs, révélant les conflits entre ambitions commerciales et gouvernance éthique.",
             "imageSrc": "https://images.unsplash.com/flagged/photo-1579274216947-86eaa4b00475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwY2VudGVyJTIwc2VydmVyc3xlbnwxfHx8fDE3NzYwOTU3OTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
             "imageAlt": "Data center",
             "reverse": true,
-            "delay": 0.9
+            "delay": 0.7
           }
         ]
       }
@@ -69,26 +70,19 @@
   },
   "summary": {
     "sectionTitle": "Présentation synthétique",
-    "sectionSubtitle": "Un aperçu rapide de la trajectoire d'OpenAI entre vision initiale, pivot industriel et impact global.",
-    "problemStatement": "De la recherche idéaliste à la puissance systémique : comment OpenAI a-t-elle reconfiguré son modèle pour devenir l'infrastructure critique de l'économie numérique mondiale ?",
-    "highlights": [
+
+    "highlights": [Un ap
       {
         "title": "Mission d'origine",
         "description": "OpenAI naît en 2015 avec une ambition forte : développer une AGI au bénéfice du plus grand nombre, dans un esprit de recherche ouverte et responsable."
-        ,"imageSrc": "https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhaSUyMHJlc2VhcmNoJTIwbGFib3JhdG9yeSUyMHRlYW18ZW58MXx8fHwxNzc2MTk0NTM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-        "imageAlt": "Laboratoire de recherche sur l'intelligence artificielle"
       },
       {
         "title": "Virage stratégique",
         "description": "Dès 2019, la montée des coûts pousse l'organisation vers un modèle hybride avec OpenAI LP et un partenariat majeur avec Microsoft."
-        ,"imageSrc": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3JlJTIwc2VydmVycyUyMGRhdGElMjBjZW50ZXJ8ZW58MXx8fHwxNzc2MTk0NTM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-        "imageAlt": "Infrastructure de datacenter et montée en puissance industrielle"
       },
       {
         "title": "Effet de bascule",
         "description": "ChatGPT et GPT-4 transforment OpenAI en acteur central de l'IA mondiale, tout en exposant des tensions de gouvernance et d'éthique."
-        ,"imageSrc": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhaSUyMGRhdGEyJTIwaW5mcmFzdHJ1Y3R1cmV8ZW58MXx8fHwxNzc2MTk0NTM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-        "imageAlt": "Infrastructure critique et transformation de l'IA en système global"
       }
     ],
     "keyFigures": [
