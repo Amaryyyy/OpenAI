@@ -29,7 +29,7 @@
           {
             "title": "I. L'Utopie du laboratoire de recherche ouvert (2015-2019)",
             "content": "À sa naissance, OpenAI se positionne comme un contre-modèle aux géants de la technologie (Big Tech). Portée par une mission de \"bien commun\", l'organisation adopte une structure non lucrative pour garantir que l'Intelligence Artificielle Générale (AGI) profite à l'humanité. Durant cette période, la stratégie est celle de la légitimation scientifique : OpenAI publie ses recherches en accès libre et lance des outils comme OpenAI Gym pour standardiser le domaine. Cependant, cette phase se heurte rapidement à une réalité matérielle : la \"course à la puissance\" (dimension Machine) exige des ressources financières et des capacités de calcul que la seule philanthropie ne peut plus soutenir.",
-            "imageSrc": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            "imageSrc": "/images/image1.jpg",
             "imageAlt": "Chercheurs en laboratoire travaillant sur des modèles d'IA",
             "reverse": false,
             "delay": 0.3
@@ -44,7 +44,7 @@
           {
             "title": "II. Le pivot industriel et le succès de l'interface au grand public (2019-2023)",
             "content": "L'année 2019 marque une rupture stratégique avec la création d'une structure à but lucratif plafonné (capped-profit) et le partenariat historique avec Microsoft. C'est l'ère de l'industrialisation. OpenAI ne se contente plus de chercher ; elle déploie des modèles fondationnels (GPT-3) via des API, transformant l'IA en une ressource exploitable par les entreprises. Ce pivot culmine avec le lancement de ChatGPT en novembre 2022, qui fait entrer l'IA dans le quotidien de millions d'utilisateurs en seulement cinq jours. L'innovation méthodologique du RLHF (apprentissage par feedback humain) permet alors de transformer une science des données brute en un produit de consommation universel, imposant OpenAI comme l'acteur dominant du marché.",
-            "imageSrc": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            "imageSrc": "/images/image2.jpg",
             "imageAlt": "Rangées de serveurs illustrant l'industrialisation de l'IA",
             "reverse": true,
             "delay": 0.6
@@ -59,7 +59,7 @@
           {
             "title": "III. Vers l'infrastructure critique, la souveraineté et les tensions (2023-2026)",
             "content": "Depuis 2023, OpenAI a changé de nature pour devenir une infrastructure critique. Sa croissance ne repose plus uniquement sur le logiciel, mais sur une maîtrise physique du numérique. Avec le projet Stargate, l'investissement se compte en centaines de milliards de dollars pour bâtir des méga-datacenters, impliquant des alliances géopolitiques avec des fonds souverains et des concurrents comme Amazon. Cette puissance nouvelle révèle toutefois des tensions structurelles : les crises de gouvernance (notamment en novembre 2023) illustrent le conflit permanent entre la mission initiale de sûreté et les impératifs d'une hyper-croissance industrielle. OpenAI incarne désormais ce point de convergence où la recherche scientifique, les intérêts étatiques et les logiques de marché fusionnent pour structurer l'avenir numérique mondial.",
-            "imageSrc": "https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            "imageSrc": "/images/image3.jpg",
             "imageAlt": "Infrastructure numerique critique et reseaux mondiaux",
             "reverse": false,
             "delay": 0.9
@@ -222,8 +222,42 @@
         "description": "Générateur de vidéos réalistes jusqu'à 60 secondes à partir de prompts textuels. Simule la physique, les mouvements de caméra et les interactions complexes, ouvrant de nouvelles frontières pour le contenu visuel.",
         "year": "2024",
         "iconKey": "video"
+      },
+      {
+        "name": "Codex",
+        "tagline": "IA & Développement",
+        "description": "Présenté en 2021, Codex est un modèle d'intelligence artificielle spécialisé dans la génération de code à partir d'instructions en langage naturel. Issu des modèles GPT, il traduit des descriptions textuelles en programmes informatiques, facilitant le travail des développeurs. Dans ses premières versions, il a été utilisé dans des outils comme GitHub Copilot. En 2025, Codex évolue vers un agent d'ingénierie logicielle basé sur le cloud, capable de réaliser des tâches complexes de manière autonome. Il s'inscrit désormais dans un processus complet de développement logiciel.",
+        "year": "2021-2025",
+        "iconKey": "codex"
+      },
+      {
+        "name": "Prism",
+        "tagline": "Rédaction Scientifique",
+        "description": "Prism est un espace de travail de rédaction scientifique basé sur LaTeX, intégrant l'intelligence artificielle pour assister la rédaction, la structuration et la collaboration sur des documents complexes. Il facilite la mise en forme, la gestion des références et la relecture. Prism témoigne du développement d'outils spécialisés destinés à des usages professionnels avancés.",
+        "year": "2025",
+        "iconKey": "prism"
+      },
+      {
+        "name": "Atlas",
+        "tagline": "IA Intégrée au Web",
+        "description": "Présenté en octobre 2025, ChatGPT Atlas est un navigateur web intégrant directement ChatGPT. Il permet d'assister l'utilisateur dans sa navigation, d'analyser les contenus consultés et d'exécuter certaines tâches directement dans le navigateur. Cet outil traduit une évolution stratégique importante : l'IA s'intègre directement dans l'environnement numérique de l'utilisateur, avec l'objectif de devenir un assistant global.",
+        "year": "2025",
+        "iconKey": "atlas"
       }
-    ]
+    ],
+    "ecosystem": {
+      "title": "Une logique d'écosystème",
+      "paragraphs": [
+        "L'ensemble de ces produits s'inscrit dans une stratégie progressive développée depuis la fin des années 2010. OpenAI construit un écosystème cohérent reposant sur des technologies communes, lui permettant de couvrir différents usages de l'intelligence artificielle.",
+        "Les produits d'OpenAI illustrent ainsi la transformation de l'organisation : d'un laboratoire de recherche à une plateforme technologique globale.",
+        "Ainsi, OpenAI s'impose progressivement comme un acteur structurant de l'économie numérique, en proposant des technologies capables de s'intégrer dans une grande variété d'usages."
+      ],
+      "strategyLead": "Cette évolution repose sur une double stratégie :",
+      "strategyPoints": [
+        "une diffusion grand public, avec des outils accessibles comme ChatGPT",
+        "une intégration professionnelle, via des modèles et des solutions spécialisées"
+      ]
+    }
   },
   "footer": {
     "sectionTitle": "Ressources & Bibliographie",

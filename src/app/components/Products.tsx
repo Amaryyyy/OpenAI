@@ -12,6 +12,9 @@ const PRODUCT_LOGOS: Record<string, string> = {
   image: '/images/dalle.png',
   mic:   '/images/whisper.png',
   video: '/images/sora.png',
+  codex: '/images/gpt.png',
+  prism: '/images/dalle.png',
+  atlas: '/images/sora.png',
 };
 
 /* ── Mesh très sombre, quasi noir ── */
@@ -96,7 +99,7 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
 
 /* ── Section ── */
 export default function Products() {
-  const { sectionTitle, sectionSubtitle } = content.products;
+  const { sectionTitle, sectionSubtitle, ecosystem } = content.products;
 
   return (
     <section id="produits" className="relative w-full scroll-mt-20 overflow-hidden py-20 md:py-28">
@@ -127,6 +130,35 @@ export default function Products() {
             <ProductCard key={index} product={item} index={index} />
           ))}
         </div>
+
+        <motion.article
+          initial={{ opacity: 0, y: 40, filter: 'blur(6px)' }}
+          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+          viewport={inViewOptions}
+          transition={springPop(0.15)}
+          className="mt-8 rounded-2xl border border-white/[0.12] bg-white/[0.05] p-6 md:mt-10 md:p-8"
+        >
+          <h3 className="mb-4 text-2xl font-black tracking-tight text-white/92 md:text-3xl">
+            {ecosystem.title}
+          </h3>
+
+          {ecosystem.paragraphs.map((paragraph, idx) => (
+            <p key={idx} className="mb-4 text-sm leading-relaxed tracking-tight text-white/60 md:text-base last:mb-0">
+              {paragraph}
+            </p>
+          ))}
+
+          <p className="mt-5 text-sm font-semibold tracking-tight text-white/78 md:text-base">
+            {ecosystem.strategyLead}
+          </p>
+          <ul className="mt-3 space-y-2">
+            {ecosystem.strategyPoints.map((point, idx) => (
+              <li key={idx} className="text-sm leading-relaxed tracking-tight text-white/62 md:text-base">
+                • {point}
+              </li>
+            ))}
+          </ul>
+        </motion.article>
       </div>
     </section>
   );

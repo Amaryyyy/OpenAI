@@ -8,6 +8,8 @@ import SectionHeading from './SectionHeading';
 
 /* ── Carte texte + image ── */
 const HistoryBlock = ({
+  periodYear,
+  periodSubtitle,
   title,
   content,
   imageSrc,
@@ -16,6 +18,8 @@ const HistoryBlock = ({
   delay = 0,
   index = 0,
 }: {
+  periodYear: string;
+  periodSubtitle: string;
   title: string;
   content: string;
   imageSrc: string;
@@ -35,7 +39,7 @@ const HistoryBlock = ({
 
       {/* ── Image ── */}
       <div className="relative w-full shrink-0 md:w-[52%]">
-        <div className="relative aspect-[4/3] w-full overflow-hidden md:aspect-auto md:h-full md:min-h-[18rem] md:max-h-[26rem]">
+        <div className="relative aspect-[4/3] w-full overflow-hidden md:aspect-auto md:h-[24rem] lg:h-[26rem]">
           <motion.div
             initial={{ scale: 1.04 }}
             whileInView={{ scale: 1 }}
@@ -65,6 +69,16 @@ const HistoryBlock = ({
         transition={springPop(delay + 0.08)}
         className="flex flex-1 flex-col justify-center p-7 md:p-9 lg:p-11"
       >
+        <div className="mb-5">
+          <span className="text-xl font-black uppercase tracking-[0.08em] text-black/75 md:text-2xl lg:text-[1.75rem]">
+            {periodYear}
+          </span>
+          <div className="my-2 h-px w-16 bg-black/25" />
+          <p className="text-base font-semibold tracking-tight text-black/55 md:text-lg">
+            {periodSubtitle}
+          </p>
+        </div>
+
         <h3 className="mb-4 text-2xl font-bold leading-snug tracking-tight md:text-[1.65rem]">
           {title}
         </h3>
@@ -74,30 +88,6 @@ const HistoryBlock = ({
       </motion.div>
     </div>
   </motion.article>
-);
-
-/* ── Séparateur de période ── */
-const PeriodLabel = ({
-  year,
-  subtitle,
-  delay,
-}: {
-  year: string;
-  subtitle: string;
-  delay: number;
-}) => (
-  <motion.div
-    initial={{ opacity: 0, y: 16 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={inViewOptions}
-    transition={revealTransition(delay)}
-    className="flex items-center gap-3"
-  >
-    <div className="h-px w-8 shrink-0 bg-black/25" />
-    <span className="text-[0.65rem] font-black uppercase tracking-[0.18em] text-black/50">{year}</span>
-    <span className="text-black/20">—</span>
-    <span className="text-xs tracking-tight text-black/38">{subtitle}</span>
-  </motion.div>
 );
 
 /* ── Section principale ── */
@@ -121,32 +111,24 @@ export default function History() {
       <div className={`relative w-full ${pageGutter} py-14 md:py-20`}>
         <div className="flex flex-col gap-16 md:gap-20">
           {periods.map((period, periodIndex) => (
-            <div key={periodIndex} className="flex flex-col gap-6 md:gap-8">
-              {/* Label de période */}
-              <PeriodLabel
-                year={period.headingYear}
-                subtitle={period.headingSubtitle}
-                delay={period.headingDelay * 0.4}
-              />
-
-              {/* Blocs de la période */}
-              <div className="flex flex-col gap-5 md:gap-6">
-                {period.blocks.map((block, blockIndex) => {
-                  const idx = blockCounter++;
-                  return (
-                    <HistoryBlock
-                      key={blockIndex}
-                      title={block.title}
-                      content={block.content}
-                      imageSrc={block.imageSrc}
-                      imageAlt={block.imageAlt}
-                      reverse={block.reverse}
-                      delay={block.delay * 0.5}
-                      index={idx}
-                    />
-                  );
-                })}
-              </div>
+            <div key={periodIndex} className="flex flex-col gap-5 md:gap-6">
+              {period.blocks.map((block, blockIndex) => {
+                const idx = blockCounter++;
+                return (
+                  <HistoryBlock
+                    key={blockIndex}
+                    periodYear={period.headingYear}
+                    periodSubtitle={period.headingSubtitle}
+                    title={block.title}
+                    content={block.content}
+                    imageSrc={block.imageSrc}
+                    imageAlt={block.imageAlt}
+                    reverse={block.reverse}
+                    delay={block.delay * 0.5}
+                    index={idx}
+                  />
+                );
+              })}
             </div>
           ))}
         </div>
