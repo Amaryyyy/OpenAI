@@ -12,8 +12,8 @@ const PRODUCT_LOGOS: Record<string, string> = {
   image: '/images/dalle.png',
   mic:   '/images/whisper.png',
   video: '/images/sora.png',
-  codex: '/images/codex.jpg',
-  prism: '/images/prism.jpg',
+  codex: '/images/codex.png',
+  prism: '/images/prism.png',
   atlas: '/images/atlas.jpg',
 };
 
