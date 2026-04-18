@@ -93,67 +93,157 @@
   },
   "timeline": {
     "sectionTitle": "Chronologie",
-    "sectionSubtitle": "Les moments clés qui ont façonné OpenAI",
+    "sectionSubtitle": "Frise structurée des phases de transformation d'OpenAI",
     "events": [
       {
-        "year": "2015",
-        "title": "I. Naissance d'OpenAI comme laboratoire de recherche à but non lucratif",
-        "description": "Création du laboratoire avec 1 milliard $ de financement initial",
+        "year": "2015-2019",
+        "title": "I. Naissance d'OpenAI comme laboratoire de recherche à but non lucratif (2015-2019)",
+        "description": "Phase fondatrice : d'une ambition de recherche ouverte vers les premières tensions de gouvernance.",
         "iconKey": "rocket"
       },
       {
-        "year": "2018",
-        "title": "GPT-1",
-        "description": "Premier modèle de langage basé sur l'architecture Transformer",
-        "iconKey": "brain"
-      },
-      {
-        "year": "2019",
-        "title": "Départ d'Elon Musk",
-        "description": "Musk quitte le conseil suite au pivot commercial",
-        "iconKey": "userX"
-      },
-      {
-        "year": "2019",
-        "title": "Partenariat Microsoft",
-        "description": "Investissement d'1 milliard $ et création d'OpenAI LP",
+        "year": "2015",
+        "title": "A. Décembre 2015 : une fondation idéaliste et ouverte",
+        "description": "Création d'OpenAI comme structure de recherche à mission universelle.",
         "iconKey": "sparkles"
       },
       {
-        "year": "2021",
-        "title": "DALL-E",
-        "description": "Lancement du générateur d'images par IA",
-        "iconKey": "image"
+        "year": "2016",
+        "title": "B. 2016 : OpenAI Gym et la logique de recherche ouverte",
+        "description": "Mise en place d'outils partagés pour accélérer la recherche en apprentissage par renforcement.",
+        "iconKey": "brain"
       },
       {
-        "year": "2022",
-        "title": "ChatGPT",
-        "description": "100 millions d'utilisateurs en 2 mois, record mondial",
+        "year": "2016",
+        "title": "C. Fin 2016 : Universe et l'idée d'une IA plus générale",
+        "description": "Extension de la vision vers des environnements variés et plus proches d'une intelligence générale.",
+        "iconKey": "video"
+      },
+      {
+        "year": "2017-2018",
+        "title": "D. Juin 2017-juin 2018 : le tournant des Transformers et de GPT-1",
+        "description": "Bascule technologique majeure avec l'architecture Transformer et les premiers modèles GPT.",
+        "iconKey": "brain"
+      },
+      {
+        "year": "2018-2019",
+        "title": "E. 2018-2019 : crise de gouvernance, rupture stratégique et basculement vers un modèle hybride",
+        "description": "Montée des contraintes de financement et réorientation institutionnelle.",
+        "iconKey": "alertTriangle"
+      },
+      {
+        "year": "2019-2023",
+        "title": "II. Pivot stratégique : ouverture au grand public (2019-2023)",
+        "description": "Période d'industrialisation, d'alignement des modèles et d'expansion à grande échelle.",
+        "iconKey": "rocket"
+      },
+      {
+        "year": "2019",
+        "title": "A. Origine : transition d'un laboratoire non-profit (capped-profit) vers une structure hybride",
+        "description": "Réorganisation du modèle économique pour soutenir la montée en puissance.",
+        "iconKey": "sparkles"
+      },
+      {
+        "year": "2019-2023",
+        "title": "B. Fondements technologiques : des modèles géants à l'alignement et à la multimodalité",
+        "description": "Consolidation de la chaîne technique, du modèle de base aux usages concrets.",
+        "iconKey": "brain"
+      },
+      {
+        "year": "2019-2023",
+        "title": "C. Avantages compétitifs : pourquoi OpenAI prend l'avantage entre 2019 et 2023",
+        "description": "Combinaison de recherche, produit, distribution et puissance de calcul.",
         "iconKey": "messageSquare"
       },
       {
-        "year": "2022",
-        "title": "Whisper",
-        "description": "Système de reconnaissance vocale open source",
+        "year": "2020-2023",
+        "title": "D. Développement stratégique : de l'API à la plateforme grand public (2020-2023)",
+        "description": "Transition de briques techniques vers des interfaces massivement utilisées.",
         "iconKey": "mic"
       },
       {
         "year": "2023",
-        "title": "GPT-4",
-        "description": "Modèle multimodal avec capacités de raisonnement avancées",
-        "iconKey": "brain"
-      },
-      {
-        "year": "2023",
-        "title": "Crise de gouvernance",
-        "description": "Éviction puis réintégration de Sam Altman en 5 jours",
+        "title": "E. 2e crise de gouvernance de novembre 2023 : révélateur des tensions du modèle hybride",
+        "description": "Épisode critique illustrant le conflit entre mission, gouvernance et croissance.",
         "iconKey": "alertTriangle"
       },
       {
-        "year": "2024",
-        "title": "Sora",
-        "description": "Générateur de vidéos par IA à partir de texte",
+        "year": "2019-2023",
+        "title": "F. Ce que cette séquence 2019-2023 permet de conclure",
+        "description": "OpenAI devient un acteur central de l'écosystème numérique mondial.",
+        "iconKey": "sparkles"
+      },
+      {
+        "year": "2023-2026",
+        "title": "III. La mutation structurelle : de laboratoire à pilier de l'économie numérique (2023-2026)",
+        "description": "Changement d'échelle : d'éditeur de modèles à infrastructure stratégique.",
+        "iconKey": "rocket"
+      },
+      {
+        "year": "2023",
+        "title": "A. Fin 2023 : crise de gouvernance et consolidation du pouvoir exécutif",
+        "description": "Stabilisation du pilotage et redéfinition des centres de décision.",
+        "iconKey": "userX"
+      },
+      {
+        "year": "2024-2025",
+        "title": "B. 2024-2025 : transformation en plateforme et infrastructure clé",
+        "description": "Extension des capacités produits et de l'assise infrastructurelle.",
         "iconKey": "video"
+      },
+      {
+        "year": "2025-2026",
+        "title": "C. 2025-2026 : expansion accélérée et position systémique",
+        "description": "Ancrage d'OpenAI comme composant structurant de l'économie numérique.",
+        "iconKey": "brain"
+      },
+      {
+        "year": "2024-2026",
+        "title": "IV. La stratégie des alliances : diversification et autonomie stratégique",
+        "description": "Ouverture de partenariats et diversification des dépendances clés.",
+        "iconKey": "sparkles"
+      },
+      {
+        "year": "2024-2026",
+        "title": "A. Le rééquilibrage de la relation avec Microsoft",
+        "description": "Réajustement progressif d'un partenariat fondateur devenu structurant.",
+        "iconKey": "messageSquare"
+      },
+      {
+        "year": "2024-2026",
+        "title": "B. L'ouverture à de nouveaux géants : le cas d'Amazon",
+        "description": "Diversification des appuis industriels pour renforcer l'autonomie stratégique.",
+        "iconKey": "video"
+      },
+      {
+        "year": "2025-2026",
+        "title": "C. L'ambition démesurée des infrastructures : le projet Stargate",
+        "description": "Projection vers des capacités de calcul massives et des investissements hors norme.",
+        "iconKey": "rocket"
+      },
+      {
+        "year": "2025-2026",
+        "title": "V. L'ambivalence stratégique : entre mission universelle et intérêts régaliens",
+        "description": "Tension croissante entre vocation initiale et réalités géopolitiques.",
+        "iconKey": "alertTriangle"
+      },
+      {
+        "year": "2025-2026",
+        "title": "A. Diversification de l'offre et réalités du marché",
+        "description": "Extension du portefeuille produits pour répondre à des segments très hétérogènes.",
+        "iconKey": "image"
+      },
+      {
+        "year": "2025-2026",
+        "title": "B. Le rapprochement avec le secteur institutionnel et la défense",
+        "description": "Montée des usages souverains et de la dimension stratégique de l'IA.",
+        "iconKey": "mic"
+      },
+      {
+        "year": "2026",
+        "title": "C. Conclusion de la période : OpenAI comme infrastructure critique mondiale",
+        "description": "Aboutissement d'une mutation institutionnelle, économique et technologique majeure.",
+        "iconKey": "brain"
       }
     ]
   },

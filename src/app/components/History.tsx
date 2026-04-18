@@ -46,7 +46,11 @@ const HistoryBlock = ({
             <ImageWithFallback
               src={imageSrc}
               alt={imageAlt}
-              className="h-full w-full object-cover grayscale transition-all duration-700 hover:grayscale-0"
+              className={`h-full w-full object-cover grayscale transition-all duration-700 hover:grayscale-0 ${
+                imageSrc.includes('/images/image2') || imageSrc.includes('/images/image3')
+                  ? 'scale-125'
+                  : ''
+              }`}
             />
           </motion.div>
 
