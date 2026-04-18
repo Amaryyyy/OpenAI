@@ -23,11 +23,11 @@
     "periods": [
       {
         "headingDelay": 0.2,
-        "headingYear": "2015-2019",
+        "headingYear": "I) 2015-2019",
         "headingSubtitle": "L'Utopie du laboratoire de recherche ouvert",
         "blocks": [
           {
-            "title": "I. L'Utopie du laboratoire de recherche ouvert (2015-2019)",
+            "title": "L'Utopie du laboratoire de recherche ouvert",
             "content": "À sa naissance, OpenAI se positionne comme un contre-modèle aux géants de la technologie (Big Tech). Portée par une mission de \"bien commun\", l'organisation adopte une structure non lucrative pour garantir que l'Intelligence Artificielle Générale (AGI) profite à l'humanité. Durant cette période, la stratégie est celle de la légitimation scientifique : OpenAI publie ses recherches en accès libre et lance des outils comme OpenAI Gym pour standardiser le domaine. Cependant, cette phase se heurte rapidement à une réalité matérielle : la \"course à la puissance\" (dimension Machine) exige des ressources financières et des capacités de calcul que la seule philanthropie ne peut plus soutenir.",
             "imageSrc": "/images/image1.jpg",
             "imageAlt": "Chercheurs en laboratoire travaillant sur des modèles d'IA",
@@ -38,13 +38,13 @@
       },
       {
         "headingDelay": 0.5,
-        "headingYear": "2019-2023",
+        "headingYear": "II) 2019-2023",
         "headingSubtitle": "Le pivot industriel et le succès de l'interface au grand public",
         "blocks": [
           {
-            "title": "II. Le pivot industriel et le succès de l'interface au grand public (2019-2023)",
+            "title": "Le pivot industriel et le succès de l'interface au grand public",
             "content": "L'année 2019 marque une rupture stratégique avec la création d'une structure à but lucratif plafonné (capped-profit) et le partenariat historique avec Microsoft. C'est l'ère de l'industrialisation. OpenAI ne se contente plus de chercher ; elle déploie des modèles fondationnels (GPT-3) via des API, transformant l'IA en une ressource exploitable par les entreprises. Ce pivot culmine avec le lancement de ChatGPT en novembre 2022, qui fait entrer l'IA dans le quotidien de millions d'utilisateurs en seulement cinq jours. L'innovation méthodologique du RLHF (apprentissage par feedback humain) permet alors de transformer une science des données brute en un produit de consommation universel, imposant OpenAI comme l'acteur dominant du marché.",
-            "imageSrc": "/images/image2.jpg",
+            "imageSrc": "/images/image2.png",
             "imageAlt": "Rangées de serveurs illustrant l'industrialisation de l'IA",
             "reverse": true,
             "delay": 0.6
@@ -53,13 +53,13 @@
       },
       {
         "headingDelay": 0.8,
-        "headingYear": "2023-2026",
-        "headingSubtitle": "Vers l'infrastructure critique, la souveraineté et les tensions",
+        "headingYear": "III) 2023-2026",
+        "headingSubtitle": "Vers l'infrastructure critique, la souveraineté et les tensions (2023-2026)",
         "blocks": [
           {
-            "title": "III. Vers l'infrastructure critique, la souveraineté et les tensions (2023-2026)",
+            "title": "Vers l'infrastructure critique, la souveraineté et les tensions (2023-2026)",
             "content": "Depuis 2023, OpenAI a changé de nature pour devenir une infrastructure critique. Sa croissance ne repose plus uniquement sur le logiciel, mais sur une maîtrise physique du numérique. Avec le projet Stargate, l'investissement se compte en centaines de milliards de dollars pour bâtir des méga-datacenters, impliquant des alliances géopolitiques avec des fonds souverains et des concurrents comme Amazon. Cette puissance nouvelle révèle toutefois des tensions structurelles : les crises de gouvernance (notamment en novembre 2023) illustrent le conflit permanent entre la mission initiale de sûreté et les impératifs d'une hyper-croissance industrielle. OpenAI incarne désormais ce point de convergence où la recherche scientifique, les intérêts étatiques et les logiques de marché fusionnent pour structurer l'avenir numérique mondial.",
-            "imageSrc": "/images/image3.jpg",
+            "imageSrc": "/images/image3.png",
             "imageAlt": "Infrastructure numerique critique et reseaux mondiaux",
             "reverse": false,
             "delay": 0.9

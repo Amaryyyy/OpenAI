@@ -14,8 +14,10 @@ const PRODUCT_LOGOS: Record<string, string> = {
   video: '/images/sora.png',
   codex: '/images/gpt.png',
   prism: '/images/dalle.png',
-  atlas: '/images/sora.png',
+  atlas: '/images/atlas.jpg',
 };
+
+const BW_LOGO_KEYS = new Set(['image', 'atlas']);
 
 /* ── Mesh très sombre, quasi noir ── */
 const meshColors: [string, string, string, string] = ['#060608', '#0a1414', '#0b0f1a', '#110e06'];
@@ -70,7 +72,11 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
             <img
               src={PRODUCT_LOGOS[product.iconKey]}
               alt={product.name}
-              className="w-full max-w-[14rem] object-contain opacity-90 transition-all duration-500 group-hover:opacity-100 group-hover:scale-105"
+              className={`w-full max-w-[14rem] object-contain opacity-90 transition-all duration-500 group-hover:opacity-100 group-hover:scale-105 ${
+                BW_LOGO_KEYS.has(product.iconKey)
+                  ? 'grayscale contrast-200 brightness-110'
+                  : ''
+              }`}
               style={{ maxHeight: '12rem' }}
             />
           )}
