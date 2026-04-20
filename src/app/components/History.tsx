@@ -27,9 +27,7 @@ const HistoryBlock = ({
   const imagePositionClass =
     imageSrc.includes('/images/image2')
       ? 'object-[66%_center]'
-      : imageSrc.includes('/images/image3')
-        ? 'object-[36%_center]'
-        : 'object-center';
+      : 'object-center';
 
   return (
   <motion.article
