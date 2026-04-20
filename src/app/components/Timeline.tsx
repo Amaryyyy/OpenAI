@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import React, { useMemo, useState } from 'react';
+import { motion } from 'motion/react';
 import { MeshGradient } from '@mesh-gradient/react';
 import {
-  ChevronLeft, ChevronRight,
   Sparkles, UserX, MessageSquare, AlertTriangle,
   Rocket, Brain, Image, Mic, Video,
 } from 'lucide-react';
@@ -10,6 +9,8 @@ import content from '../content.json';
 import { pageGutter } from '../glassStyles';
 import { inViewOptions, springPop } from '../scrollMotion';
 import SectionHeading from './SectionHeading';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion';
 
 const timelineIcons = {
   sparkles: Sparkles, userX: UserX, messageSquare: MessageSquare,
@@ -23,144 +24,84 @@ const events: TimelineEvent[] = content.timeline.events.map((ev) => ({
   year: ev.year,
   title: ev.title,
   description: ev.description,
-  Icon: timelineIcons[ev.iconKey as TimelineIconKey],
+  Icon: timelineIcons[ev.iconKey as TimelineIconKey] ?? Sparkles,
 }));
 
 /* ── Mesh dark — même palette que le Hero ── */
 const meshColors: [string, string, string, string] = ['#141c24', '#2a5f5f', '#354a72', '#6e5c45'];
 
 /* ── Styles verre sombre ── */
-const darkCard  = 'border border-white/[0.12] bg-white/[0.07] rounded-2xl shadow-[0_14px_56px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-2xl backdrop-saturate-150';
-const darkPanel = 'border border-white/[0.14] bg-white/[0.09] shadow-[0_2px_12px_rgba(0,0,0,0.25),inset_0_1px_0_rgba(255,255,255,0.1)] backdrop-blur-xl backdrop-saturate-150';
+const darkCard = 'rounded-2xl border border-white/[0.12] bg-white/[0.07] shadow-[0_14px_56px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-2xl backdrop-saturate-150';
+const darkPanel = 'rounded-xl border border-white/[0.14] bg-white/[0.09] shadow-[0_2px_12px_rgba(0,0,0,0.25),inset_0_1px_0_rgba(255,255,255,0.1)] backdrop-blur-xl backdrop-saturate-150';
 
-/* ────────────────────────────────
-   Constantes du cadran
-──────────────────────────────── */
-const N        = events.length;
-const STEP     = 360 / N;
-const D        = 300;
-const CX       = D / 2;
-const CY       = D / 2;
-const R_TICK   = 120;
-const R_PROG   = R_TICK + 18;
-const R_CENTER = 40;
-const CIRC     = 2 * Math.PI * R_PROG;
-
-function progressDash(idx: number) {
-  if (N <= 1) return CIRC;
-  return CIRC * (1 - idx / (N - 1));
+interface TimelinePhase {
+  id: string;
+  label: string;
+  year: string;
+  title: string;
+  description: string;
+  Icon: React.ElementType;
+  items: TimelineEvent[];
 }
 
-/* ────────────────────────────────
-   Cadran SVG (couleurs inversées)
-──────────────────────────────── */
-function Dial({ activeIndex }: { activeIndex: number }) {
-  const rotation = activeIndex * STEP;
+function isMainSection(title: string) {
+  return /^[IVXLCDM]+\./.test(title.trim());
+}
 
-  return (
-    <div className="relative shrink-0" style={{ width: D, height: D }}>
-      <svg width={D} height={D} viewBox={`0 0 ${D} ${D}`} overflow="visible" aria-hidden>
+function getMainLabel(title: string) {
+  const match = title.trim().match(/^([IVXLCDM]+\.)/);
+  return match ? match[1] : 'Phase';
+}
 
-        {/* ── Anneaux fixes ── */}
-        <circle cx={CX} cy={CY} r={R_PROG + 4}  fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="1" strokeDasharray="4 8" />
-        <circle cx={CX} cy={CY} r={R_PROG}       fill="none" stroke="rgba(255,255,255,0.1)"  strokeWidth="1" />
-        <circle cx={CX} cy={CY} r={R_TICK - 28}  fill="none" stroke="rgba(255,255,255,0.05)" strokeWidth="0.8" />
+function buildPhases(data: TimelineEvent[]): TimelinePhase[] {
+  const phases: TimelinePhase[] = [];
+  let current: TimelinePhase | null = null;
 
-        {/* ── Arc de progression (fixe, démarre à 12h) ── */}
-        <g transform={`rotate(-90 ${CX} ${CY})`}>
-          <circle cx={CX} cy={CY} r={R_PROG} fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="2.5" />
-          <motion.circle
-            cx={CX} cy={CY} r={R_PROG}
-            fill="none"
-            stroke="rgba(255,255,255,0.65)"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeDasharray={CIRC}
-            animate={{ strokeDashoffset: progressDash(activeIndex) }}
-            transition={{ type: 'spring', stiffness: 220, damping: 32, mass: 0.9 }}
-          />
-        </g>
+  data.forEach((event, index) => {
+    if (isMainSection(event.title)) {
+      const phase: TimelinePhase = {
+        id: `phase-${index}`,
+        label: getMainLabel(event.title),
+        year: event.year,
+        title: event.title,
+        description: event.description,
+        Icon: event.Icon,
+        items: [],
+      };
+      phases.push(phase);
+      current = phase;
+      return;
+    }
 
-        {/* ── Groupe rotatif ── */}
-        <motion.g
-          animate={{ rotate: rotation }}
-          transition={{ type: 'spring', stiffness: 220, damping: 32, mass: 0.9 }}
-          style={{ transformOrigin: `${CX}px ${CY}px` }}
-        >
-          {events.map((_, i) => {
-            const angleDeg = -90 - i * STEP;
-            const rad      = (angleDeg * Math.PI) / 180;
-            const cos      = Math.cos(rad);
-            const sin      = Math.sin(rad);
-            const isActive = i === activeIndex;
-            const tickLen  = isActive ? 26 : 13;
+    if (!current) {
+      const fallback: TimelinePhase = {
+        id: `phase-fallback-${index}`,
+        label: 'Phase',
+        year: event.year,
+        title: 'Phase non classée',
+        description: 'Éléments complémentaires de la chronologie.',
+        Icon: event.Icon,
+        items: [event],
+      };
+      phases.push(fallback);
+      current = fallback;
+      return;
+    }
 
-            return (
-              <g key={i}>
-                <line
-                  x1={CX + (R_TICK - tickLen) * cos} y1={CY + (R_TICK - tickLen) * sin}
-                  x2={CX + R_TICK * cos}             y2={CY + R_TICK * sin}
-                  stroke={isActive ? 'rgba(255,255,255,0.92)' : 'rgba(255,255,255,0.22)'}
-                  strokeWidth={isActive ? 3 : 1.2}
-                  strokeLinecap="round"
-                />
-                <circle
-                  cx={CX + (R_PROG - 1) * cos} cy={CY + (R_PROG - 1) * sin}
-                  r={isActive ? 4.5 : 2.5}
-                  fill={isActive ? 'rgba(255,255,255,0.88)' : 'rgba(255,255,255,0.18)'}
-                />
-                <line
-                  x1={CX + (R_CENTER + 4) * cos} y1={CY + (R_CENTER + 4) * sin}
-                  x2={CX + (R_TICK - tickLen - 4) * cos} y2={CY + (R_TICK - tickLen - 4) * sin}
-                  stroke="rgba(255,255,255,0.05)"
-                  strokeWidth="0.8"
-                />
-              </g>
-            );
-          })}
-        </motion.g>
+    current.items.push(event);
+  });
 
-        {/* ── Indicateur fixe ── */}
-        <polygon
-          points={`${CX - 5},${CY - R_PROG - 14}  ${CX + 5},${CY - R_PROG - 14}  ${CX},${CY - R_PROG - 2}`}
-          fill="rgba(255,255,255,0.8)"
-        />
-
-        {/* ── Pastille centrale ── */}
-        <circle cx={CX} cy={CY} r={R_CENTER} fill="rgba(0,0,0,0.45)" />
-        <circle cx={CX} cy={CY} r={R_CENTER} fill="none" stroke="rgba(255,255,255,0.14)" strokeWidth="1.5" />
-      </svg>
-
-      {/* Année au centre */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <AnimatePresence mode="wait">
-          <motion.span
-            key={events[activeIndex].year}
-            initial={{ opacity: 0, scale: 0.75, y: 4 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 1.15, y: -4 }}
-            transition={{ duration: 0.18 }}
-            className="text-[1.35rem] font-black tracking-tight text-white/90"
-          >
-            {events[activeIndex].year}
-          </motion.span>
-        </AnimatePresence>
-      </div>
-    </div>
-  );
+  return phases;
 }
 
 /* ────────────────────────────────
    Section principale
 ──────────────────────────────── */
 export default function Timeline() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const phases = useMemo(() => buildPhases(events), []);
+  const [activePhase, setActivePhase] = useState(phases[0]?.id ?? '');
   const { sectionTitle, sectionSubtitle } = content.timeline;
-  const event   = events[activeIndex];
-  const EventIcon = event.Icon;
-
-  const prev = () => setActiveIndex((i) => Math.max(0, i - 1));
-  const next = () => setActiveIndex((i) => Math.min(N - 1, i + 1));
+  const currentPhase = phases.find((phase) => phase.id === activePhase) ?? phases[0];
 
   return (
     <section id="chronologie" className="relative w-full scroll-mt-20 overflow-hidden py-20 text-white md:py-28">
@@ -198,98 +139,105 @@ export default function Timeline() {
           <SectionHeading title={sectionTitle} subtitle={sectionSubtitle} dark />
         </motion.div>
 
-        {/* ── Cadran + contenu ── */}
-        <div className="flex flex-col items-center gap-8 md:flex-row md:items-center md:gap-10 lg:gap-16">
+        <Tabs value={currentPhase?.id ?? ''} onValueChange={setActivePhase} className="w-full gap-6">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={inViewOptions}
+            transition={springPop(0.08)}
+            className="overflow-x-auto pb-2"
+          >
+            <TabsList className={`${darkPanel} h-auto w-max min-w-full gap-2 rounded-2xl bg-white/[0.08] p-2 md:min-w-0`}>
+              {phases.map((phase) => (
+                <TabsTrigger
+                  key={phase.id}
+                  value={phase.id}
+                  className="group min-w-[170px] rounded-xl border border-white/10 bg-transparent px-4 py-3 text-left text-white/75 data-[state=active]:border-white/25 data-[state=active]:bg-white/15 data-[state=active]:text-white"
+                >
+                  <span className="block text-[0.68rem] font-black uppercase tracking-[0.18em] text-white/45 group-data-[state=active]:text-white/65">
+                    {phase.label}
+                  </span>
+                  <span className="mt-1 block text-sm font-semibold leading-tight">{phase.year}</span>
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </motion.div>
 
-          {/* Cadran */}
-          <div className="flex flex-col items-center gap-5">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.85 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={inViewOptions}
-              transition={springPop(0.1)}
-            >
-              <Dial activeIndex={activeIndex} />
-            </motion.div>
+          {phases.map((phase, phaseIndex) => {
+            const PhaseIcon = phase.Icon;
+            return (
+              <TabsContent key={phase.id} value={phase.id}>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={inViewOptions}
+                  transition={springPop(0.12)}
+                  className={`${darkCard} p-5 md:p-8`}
+                >
+                  <div className="mb-7 flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                    <div>
+                      <span className="mb-3 inline-flex rounded-full border border-white/15 bg-white/[0.08] px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-white/65">
+                        {phase.year}
+                      </span>
+                      <h3 className="max-w-3xl text-xl font-bold leading-tight tracking-tight text-white/95 md:text-2xl">
+                        {phase.title}
+                      </h3>
+                      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-white/65 md:text-base">
+                        {phase.description}
+                      </p>
+                    </div>
 
-            {/* Navigation */}
-            <div className="flex items-center gap-4">
-              <button
-                type="button" onClick={prev} disabled={activeIndex === 0}
-                className={`${darkPanel} flex h-10 w-10 items-center justify-center rounded-full text-white transition-all hover:scale-105 disabled:opacity-25`}
-                aria-label="Précédent"
-              >
-                <ChevronLeft size={18} strokeWidth={2.5} />
-              </button>
-              <span className="min-w-[4rem] text-center text-sm font-black tabular-nums text-white/45">
-                {String(activeIndex + 1).padStart(2, '0')}&thinsp;/&thinsp;{String(N).padStart(2, '0')}
-              </span>
-              <button
-                type="button" onClick={next} disabled={activeIndex === N - 1}
-                className={`${darkPanel} flex h-10 w-10 items-center justify-center rounded-full text-white transition-all hover:scale-105 disabled:opacity-25`}
-                aria-label="Suivant"
-              >
-                <ChevronRight size={18} strokeWidth={2.5} />
-              </button>
-            </div>
-          </div>
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/[0.12] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.15)] backdrop-blur-sm">
+                      <PhaseIcon className="h-5 w-5" />
+                    </div>
+                  </div>
 
-          {/* Carte de contenu */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeIndex}
-              initial={{ opacity: 0, x: 24, filter: 'blur(4px)' }}
-              animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
-              exit={{ opacity: 0, x: -24, filter: 'blur(4px)' }}
-              transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
-              className={`${darkCard} w-full flex-1 p-7 md:p-9`}
-            >
-              {/* Entête : numéro + icône */}
-              <div className="mb-6 flex items-start gap-4">
-                <span className="select-none text-7xl font-black leading-none text-white/[0.06]">
-                  {String(activeIndex + 1).padStart(2, '0')}
-                </span>
-                <div className="mt-1 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-white/[0.12] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.15)] backdrop-blur-sm">
-                  <EventIcon className="h-5 w-5" />
-                </div>
-              </div>
+                  <div className="relative pl-4 md:pl-6">
+                    <div className="pointer-events-none absolute bottom-2 left-[6px] top-2 w-px bg-gradient-to-b from-white/35 via-white/20 to-transparent md:left-[10px]" />
 
-              {/* Année badge */}
-              <span className="mb-3 inline-flex rounded-full border border-white/15 bg-white/[0.08] px-3 py-0.5 text-xs font-black uppercase tracking-[0.14em] text-white/55">
-                {event.year}
-              </span>
+                    <Accordion type="single" collapsible defaultValue={phase.items[0] ? `${phase.id}-item-0` : undefined} className="space-y-3">
+                      {phase.items.map((item, itemIndex) => {
+                        const ItemIcon = item.Icon;
+                        return (
+                          <AccordionItem
+                            key={`${phase.id}-${itemIndex}`}
+                            value={`${phase.id}-item-${itemIndex}`}
+                            className="relative overflow-hidden rounded-xl border border-white/14 bg-black/20 px-4 last:border-white/14 md:px-5"
+                          >
+                            <span className="pointer-events-none absolute left-[-14px] top-7 h-2.5 w-2.5 rounded-full border border-white/35 bg-white/80 md:left-[-16px]" />
+                            <AccordionTrigger className="py-4 text-white hover:no-underline">
+                              <div className="flex w-full items-start gap-3 pr-3 text-left">
+                                <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-white/15 bg-white/[0.09] text-white/80">
+                                  <ItemIcon className="h-4 w-4" />
+                                </div>
+                                <div className="min-w-0">
+                                  <span className="mb-1 inline-flex rounded-full border border-white/12 bg-white/[0.08] px-2.5 py-0.5 text-[0.65rem] font-black uppercase tracking-[0.14em] text-white/55">
+                                    {item.year}
+                                  </span>
+                                  <p className="text-sm font-semibold leading-snug text-white/90 md:text-[0.95rem]">
+                                    {item.title}
+                                  </p>
+                                </div>
+                              </div>
+                            </AccordionTrigger>
+                            <AccordionContent className="pt-1 text-sm leading-relaxed text-white/68">
+                              {item.description}
+                            </AccordionContent>
+                          </AccordionItem>
+                        );
+                      })}
+                    </Accordion>
+                  </div>
 
-              {/* Titre */}
-              <h3 className="mb-3 text-2xl font-bold leading-snug tracking-tight text-white/92 md:text-3xl">
-                {event.title}
-              </h3>
-
-              {/* Description */}
-              <p className="mb-8 text-base leading-relaxed tracking-tight text-white/55">
-                {event.description}
-              </p>
-
-              {/* Progression */}
-              <div className="flex gap-1.5">
-                {events.map((_, i) => (
-                  <button
-                    key={i}
-                    type="button"
-                    onClick={() => setActiveIndex(i)}
-                    aria-label={`Événement ${i + 1}`}
-                    className={`h-1.5 flex-1 rounded-full transition-all duration-500 ${
-                      i === activeIndex
-                        ? 'bg-white/75 scale-y-125'
-                        : i < activeIndex
-                          ? 'bg-white/30'
-                          : 'bg-white/12'
-                    }`}
-                  />
-                ))}
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
+                  <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4 text-xs font-black uppercase tracking-[0.13em] text-white/45">
+                    <span>{phase.items.length} sous-partie{phase.items.length > 1 ? 's' : ''}</span>
+                    <span>Phase {phaseIndex + 1} / {phases.length}</span>
+                  </div>
+                </motion.div>
+              </TabsContent>
+            );
+          })}
+        </Tabs>
       </div>
     </section>
   );
